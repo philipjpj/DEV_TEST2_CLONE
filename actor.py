@@ -37,8 +37,6 @@ class Actor:
     #     data = b.fetchall()
     #     b.closeConnection() ## per chiudere la connessione
 
-    #     return data  #utile quando voglio andare a prendere i valori e richiamarli da un'altra parte come in questo caso (VEDI RIGA 30)
-
 final = Actor()
 print("Inserisci l'Id dell'attore")
 actorId = int(input())

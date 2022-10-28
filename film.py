@@ -2,10 +2,17 @@ from connection3 import MySql
 
 class Film:
 
+<<<<<<< HEAD
     def getAllActors(self):
 
         a = MySql() 
         a.execute(sql="SELECT * FROM film")
+=======
+    def getAllFilm(self):
+
+        a = MySql() 
+        a.execute(sql="SELECT title FROM Film")
+>>>>>>> b601fbf7e51e967ec90d894d009960fe30bda7c9
 
         data = a.fetchall()
         a.closeConnection()
@@ -13,6 +20,7 @@ class Film:
         return data  
 
 
+<<<<<<< HEAD
     def getFilmByTitle(self, filmTitle):
 
         a = MySql() 
@@ -43,6 +51,12 @@ final = Film()
 print("Inserisci titolo del film")
 filmTitle = input()
 print(final.getFilmByTitle(filmTitle))
+=======
+
+
+final = Film()
+print(final.getAllFilm())
+>>>>>>> b601fbf7e51e967ec90d894d009960fe30bda7c9
 
 
 
