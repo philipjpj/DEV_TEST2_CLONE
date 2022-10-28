@@ -2,31 +2,23 @@ from connection3 import MySql
 
 class Film:
 
-<<<<<<< HEAD
-    def getAllActors(self):
-
-        a = MySql() 
-        a.execute(sql="SELECT * FROM film")
-=======
     def getAllFilm(self):
 
         a = MySql() 
         a.execute(sql="SELECT title FROM Film")
->>>>>>> b601fbf7e51e967ec90d894d009960fe30bda7c9
 
         data = a.fetchall()
         a.closeConnection()
 
-        return data  
+        return data
 
 
-<<<<<<< HEAD
-    def getFilmByTitle(self, filmTitle):
+    def getFilmByLength(self):
 
         a = MySql() 
-        a.execute(sql=f"SELECT * \
+        a.execute(sql=f"SELECT f.title \
                         FROM film f \
-                        WHERE f.title = '{filmTitle}'")
+                        WHERE f.length > 120")
 
         data = a.fetchall()
         a.closeConnection()
@@ -48,15 +40,7 @@ class Film:
     #     return data  #utile quando voglio andare a prendere i valori e richiamarli da un'altra parte come in questo caso (VEDI RIGA 30)
 
 final = Film()
-print("Inserisci titolo del film")
-filmTitle = input()
-print(final.getFilmByTitle(filmTitle))
-=======
-
-
-final = Film()
-print(final.getAllFilm())
->>>>>>> b601fbf7e51e967ec90d894d009960fe30bda7c9
+print(final.getFilmByLength())
 
 
 
